@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class RarVfsTest {
             assertThat(fileContent.getSize()).isEqualTo(7);
 
             InputStream is = fileContent.getInputStream();
-            assertThat(IOUtils.toString(is)).isEqualTo("file" + finalI + "\r\n");
+            assertThat(IOUtils.toString(is, Charset.defaultCharset())).isEqualTo("file" + finalI + "\r\n");
         }
     }
 
