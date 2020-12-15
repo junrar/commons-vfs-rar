@@ -1,6 +1,6 @@
 package com.github.junrar.vfs2.provider.rar;
 
-import com.github.junrar.io.IReadOnlyAccess;
+import com.github.junrar.io.SeekableReadOnlyByteChannel;
 import org.apache.commons.vfs2.FileObject;
 import org.apache.commons.vfs2.FileSystemException;
 import org.apache.commons.vfs2.RandomAccessContent;
@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * @author <a href="http://www.rogiel.com">Rogiel</a>
  */
-public class RandomAccessContentAccess implements IReadOnlyAccess {
+public class RandomAccessContentAccess implements SeekableReadOnlyByteChannel {
     private final RandomAccessContent rac;
 
     public RandomAccessContentAccess(RandomAccessContent rac) {
