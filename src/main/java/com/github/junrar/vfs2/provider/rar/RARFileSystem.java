@@ -153,12 +153,4 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
         }
         return null;
     }
-
-    /**
-     * will be called after all file-objects closed their streams.
-     */
-    @Override
-    protected void notifyAllStreamsClosed() {
-        closeCommunicationLink();
-    }
 }

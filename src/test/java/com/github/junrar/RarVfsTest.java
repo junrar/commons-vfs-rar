@@ -42,8 +42,9 @@ public class RarVfsTest {
 
             assertThat(fileContent.getSize()).isEqualTo(7);
 
-            InputStream is = fileContent.getInputStream();
-            assertThat(IOUtils.toString(is, Charset.defaultCharset())).isEqualTo("file" + finalI + "\r\n");
+            try (InputStream is = fileContent.getInputStream()) {
+                assertThat(IOUtils.toString(is, Charset.defaultCharset())).isEqualTo("file" + finalI + "\r\n");
+            }
         }
     }
 
