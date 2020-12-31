@@ -1,9 +1,9 @@
 package com.github.junrar.vfs2.provider.rar;
 
 import com.github.junrar.Archive;
-import com.github.junrar.Volume;
-import com.github.junrar.io.IReadOnlyAccess;
-import com.github.junrar.io.InputStreamReadOnlyAccessFile;
+import com.github.junrar.volume.Volume;
+import com.github.junrar.io.SeekableReadOnlyByteChannel;
+import com.github.junrar.io.SeekableReadOnlyInputStream;
 import org.apache.commons.vfs2.FileObject;
 import org.apache.commons.vfs2.FileSystemException;
 import org.apache.commons.vfs2.RandomAccessContent;
@@ -29,13 +29,13 @@ public class VFSVolume implements Volume {
     }
 
     @Override
-    public IReadOnlyAccess getReadOnlyAccess() throws IOException {
-        IReadOnlyAccess input = null;
+    public SeekableReadOnlyByteChannel getChannel() throws IOException {
+        SeekableReadOnlyByteChannel input = null;
         try {
             final RandomAccessContent rac = this.file.getContent().getRandomAccessContent(RandomAccessMode.READ);
             input = new RandomAccessContentAccess(rac);
         } catch (final Exception e) {
-            input = new InputStreamReadOnlyAccessFile(this.file.getContent().getInputStream());
+            input = new SeekableReadOnlyInputStream(this.file.getContent().getInputStream());
         }
         return input;
     }

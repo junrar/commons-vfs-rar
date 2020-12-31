@@ -62,7 +62,7 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
 
         try {
             try {
-                this.archive = new Archive(new VFSVolumeManager(this.parentLayer));
+                this.archive = new Archive(new VFSVolumeManager(this.parentLayer), null, null);
                 // Build the index
                 final List<RARFileObject> strongRef = new ArrayList<RARFileObject>(
                     100);
