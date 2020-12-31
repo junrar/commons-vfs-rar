@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/junrar/commons-vfs-rar.svg?branch=master)](https://travis-ci.com/junrar/commons-vfs-rar)
+[![Build Status](https://github.com/junrar/commons-vfs-rar/workflows/CI/badge.svg?branch=master)](https://github.com/junrar/commons-vfs-rar/actions?query=workflow%3ACI+branch%3Amaster)
 [![Download](https://api.bintray.com/packages/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/images/download.svg) ](https://bintray.com/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/_latestVersion)
 [![codecov](https://codecov.io/gh/junrar/commons-vfs-rar/branch/master/graph/badge.svg)](https://codecov.io/gh/junrar/commons-vfs-rar)
 
