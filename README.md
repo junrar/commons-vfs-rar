@@ -38,7 +38,10 @@ It has been carved out of [Junrar](https://github.com/junrar/junrar).
 
 where `{version}` corresponds to version as below:
 
-- Java 8 Version: [![Download](https://api.bintray.com/packages/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/images/download.svg) ](https://bintray.com/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/_latestVersion)
+| commons-vfs-version | Java version | Junrar version |
+|---------------------|:------------:|:--------------:|
+| [![Download](https://api.bintray.com/packages/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/images/download.svg) ](https://bintray.com/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/_latestVersion) | 8            |      7.4.0     |
+| [![Download](https://api.bintray.com/packages/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/images/download.svg?version=1.0.0) ](https://bintray.com/bintray/jcenter/com.github.junrar%3Acommons-vfs-rar/1.0.0/link) | 8            |      5.0.0     |
 
 If you need Java 6 support, you can get version `4.0.0` of Junrar which bundled VFS support: [![Download](https://api.bintray.com/packages/bintray/jcenter/com.github.junrar%3Ajunrar/images/download.svg?version=4.0.0) ](https://bintray.com/bintray/jcenter/com.github.junrar%3Ajunrar/4.0.0/link)
 
