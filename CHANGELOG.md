@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/junrar/commons-vfs-rar/compare/v1.1.0...v1.1.1) (2020-12-31)
+
+
+### Bug Fixes
+
+* don't close archive when FileObject streams close ([#6](https://github.com/junrar/commons-vfs-rar/issues/6)) ([080826c](https://github.com/junrar/commons-vfs-rar/commit/080826c3dc8f7fbbad757b9f2b2a9c22f3caad2b))
+
 # [1.1.0](https://github.com/junrar/commons-vfs-rar/compare/v1.0.0...v1.1.0) (2020-12-31)
 
 
