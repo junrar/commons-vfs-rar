@@ -45,7 +45,7 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
     private final FileObject parentLayer;
 
     private Archive archive;
-    private final Map<String, FileHeader> files = new HashMap<String, FileHeader>();
+    private final Map<String, FileHeader> files = new HashMap<>();
 
     public RARFileSystem(
         final AbstractFileName rootName,
@@ -64,13 +64,13 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
             try {
                 this.archive = new Archive(new VFSVolumeManager(this.parentLayer), null, null);
                 // Build the index
-                final List<RARFileObject> strongRef = new ArrayList<RARFileObject>(
+                final List<RARFileObject> strongRef = new ArrayList<>(
                     100);
                 for (final FileHeader header : this.archive.getFileHeaders()) {
                     final AbstractFileName name = (AbstractFileName) getFileSystemManager()
                         .resolveName(
                             getRootName(),
-                            UriParser.encode(header.getFileNameString()));
+                            UriParser.encode(header.getFileName()));
 
                     // Create the file
                     RARFileObject fileObj;
@@ -104,9 +104,7 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
                     }
                 }
 
-            } catch (final RarException e) {
-                throw new FileSystemException(e);
-            } catch (final IOException e) {
+            } catch (final RarException | IOException e) {
                 throw new FileSystemException(e);
             }
         } finally {
@@ -123,8 +121,6 @@ public class RARFileSystem extends AbstractFileSystem implements FileSystem {
     protected void doCloseCommunicationLink() {
         try {
             this.archive.close();
-        } catch (final FileSystemException e) {
-            throw new RuntimeException(e);
         } catch (final IOException e) {
             throw new RuntimeException(e);
         }
