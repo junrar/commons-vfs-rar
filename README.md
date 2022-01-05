@@ -1,5 +1,6 @@
 [![Build Status](https://github.com/junrar/commons-vfs-rar/workflows/CI/badge.svg?branch=master)](https://github.com/junrar/commons-vfs-rar/actions?query=workflow%3ACI+branch%3Amaster)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.junrar/commons-vfs-rar)](https://search.maven.org/artifact/com.github.junrar/commons-vfs-rar)
+[![javadoc](https://javadoc.io/badge2/com.github.junrar/commons-vfs-rar/javadoc.svg)](https://javadoc.io/doc/com.github.junrar/commons-vfs-rar)
 [![codecov](https://codecov.io/gh/junrar/commons-vfs-rar/branch/master/graph/badge.svg)](https://codecov.io/gh/junrar/commons-vfs-rar)
 
 # Apache Commons VFS RAR Provider
